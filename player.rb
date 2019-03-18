@@ -4,7 +4,7 @@ class Player
       @hp = 3
     end
   
-    def wrong
+    def wrongAnswer
       @hp -= 1
     end
   
