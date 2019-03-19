@@ -1,27 +1,11 @@
-class Game
-  
-    def initialize(current_player)
-      @lives = 3
-      @num1 = rand(5)
-      @num2 = rand(5)
-      @answer = @num1 + @num2
-  
-    while @lives > 0 do
-      puts "#{current_player}: #{@num1} + #{@num2}?"
-      
-      @player_answer = gets.chomp.to_i
+class Questions
+  attr_accessor :answer, :prompt
 
-      if @answer == @player_answer.to_i
-        puts "Oui, Genius!"
-        puts "Your hp is #{@lives} /3"
-      else 
-        puts "Oh no..."
-        @lives -= 1
-        puts "You have #{@lives} /3"
-      end
-    end
-    end
-
+  def initialize
+    @num1 = 1 + rand(10) 
+    @num2 = 1 + rand(10)
+    @answer = @num1 + @num2
+    @prompt = "What is #{@num1} + #{@num2}?"
   end
 
-  test = Game.new("Player")
+end

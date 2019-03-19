@@ -1,11 +1,9 @@
 class Player
+	attr_accessor :name, :hp
 
-    def initialize
-      @hp = 3
-    end
-  
-    def wrongAnswer
-      @hp -= 1
-    end
+    def initialize(name)
+			@name = name
+			@hp = 3
+		end
   
   end
